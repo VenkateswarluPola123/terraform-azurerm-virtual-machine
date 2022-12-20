@@ -85,8 +85,6 @@ resource "aws_lambda_function" "lambda" {
   role          = aws_iam_role.role.arn
   handler       = "lambda.lambda_handler"
   runtime       = "python3.7"
-
-  source_code_hash = filebase64sha256("lambda.zip")
 }
 
 # IAM
